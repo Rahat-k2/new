@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en"> 
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home Decor Products</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<style type="text/css" id="dcoder_stylesheet">/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #fff;
+    padding: 1rem 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #008cba;
+}
+
+/* Hero Section */
+#hero {
+    background-image: url('hero-background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+#hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Products Section */
+#products {
+    background-color: #fff;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+#products h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.product-card {
+    background-color: #fff;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.product-card img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.product-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.product-card p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Inspiration Section */
+#inspiration {
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+#inspiration h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.inspiration-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.inspiration-grid article {
+    background-color: #fff;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: left;
+}
+
+.inspiration-grid h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.inspiration-grid p {
+    font-size: 1rem;
+    color: #666;
+}
+/* Subscribe Section */
+#subscribe {
+    background-color: #f0f8f0;
+    padding: 2rem;
+    text-align: center;
+    margin: 3rem 0;
+    border-radius: 8px;
+    max-width: 300px;
+    margin-left: auto;  /* Aligns it to the right */
+    margin-right: 2rem; /* Adds space from the right edge */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#subscribe h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+#subscribe p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+#subscribe button {
+    background-color: #008cba;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#subscribe button:hover {
+    background-color: #005f73;
+}
+
+/* Footer */
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Makes it responsive */
+}
+
+/* Reviews Section */
+.reviews h4 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.reviews p {
+    font-size: 1.2rem;
+}
+
+/* Social Media Links */
+.social-media h4 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.social-media ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.social-media ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-media ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.social-media ul li a:hover {
+    color: #008cba;
+}
+
+/* Icons for Social Media */
+.social-media ul li i {
+    margin-right: 8px; /* Adds space between icon and text */
+    font-size: 1.2rem;
+}
+
+/* Footer Text */
+footer p {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+/* Social Media Links */
+.social-media h4 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.social-media ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.social-media ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.social-media ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.social-media ul li a:hover {
+    color: #008cba;
+}
+
+/* Footer Text */
+footer p {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}</style></head>
+ <body> 
+  <header> 
+   <nav> 
+    <div class="logo"> 
+     <h1>Home Decor</h1> 
+    </div> 
+    <ul class="nav-links"> 
+     <li><a href="#home">Home</a></li> 
+     <li><a href="#products">Products</a></li> 
+     <li><a href="#inspiration">Inspiration</a></li> 
+     <li><a href="#contact">Contact</a></li> 
+    </ul> 
+   </nav> 
+  </header> 
+  <section id="hero"> 
+   <h2>Home Design &amp; Decorating</h2> 
+   <p>Explore the latest in home decor products to make your space feel like home.</p> 
+  </section> 
+  <section id="products"> 
+   <h2>Featured Products</h2> 
+   <div class="product-grid"> 
+    <article class="product-card"> 
+     <img src="living-room.jpg" alt="Living Room Decor"> 
+     <h3>Living Room Decor</h3> 
+     <p>Find the perfect pieces to complete your living space.</p> 
+    </article> 
+    <article class="product-card"> 
+     <img src="outdoor.jpg" alt="Outdoor Living"> 
+     <h3>Outdoor Decor</h3> 
+     <p>Transform your outdoor area with stylish decor products.</p> 
+    </article> 
+    <article class="product-card"> 
+     <img src="bedroom.jpg" alt="Bedroom Decor"> 
+     <h3>Bedroom Decor</h3> 
+     <p>Make your bedroom a cozy retreat with our curated selections.</p> 
+    </article> 
+    <article class="product-card"> 
+     <img src="kitchen.jpg" alt="Kitchen Decor"> 
+     <h3>Kitchen Decor</h3> 
+     <p>Bring style and functionality to your kitchen.</p> 
+    </article> 
+   </div> 
+  </section> 
+  <section id="inspiration"> 
+   <h2>Inspiration for Your Home</h2> 
+   <div class="inspiration-grid"> 
+    <article> 
+     <h3>45 Outdoor Living Ideas</h3> 
+     <p>Upgrade your outdoor space with these trendy ideas.</p> 
+    </article> 
+    <article> 
+     <h3>Coastal Living Room Vibes</h3> 
+     <p>Create a coastal retreat right in your living room.</p> 
+    </article> 
+    <article> 
+     <h3>Design Tips for Small Spaces</h3> 
+     <p>Maximize your space with these practical and stylish tips.</p> 
+    </article> 
+    <article> 
+     <h3>Ultimate Bedroom Makeover</h3> 
+     <p>Transform your bedroom with chic, comfortable decor ideas.</p> 
+    </article> 
+   </div> 
+  </section> 
+  <section id="subscribe">
+    <h3>Spruce Up Your Inbox!</h3>
+    <p>Get daily tips and tricks for making your best home.</p>
+    <button>Subscribe</button>
+</section>
+  <footer>
+    <div class="footer-content">
+        <div class="reviews">
+            <h4>Customer Reviews &amp; Ratings</h4>
+            <p>⭐⭐⭐⭐☆ (4.5/5 based on 320 reviews)</p>
+        </div>
+
+        <div class="social-media">
+            <h4>Follow Us</h4>
+            <ul>
+                <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+                <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+                <li><a href="https://pinterest.com" target="_blank"><i class="fab fa-pinterest"></i> Pinterest</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <p>© 2024 Home Decor. All rights reserved.</p>
+</footer>
+ 
+</body></html>

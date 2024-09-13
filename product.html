@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Home Decor Products</title> 
+  <link rel="stylesheet" href="styles.css"> 
+ <style type="text/css" id="dcoder_stylesheet">/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Product List Styles */
+.product-list {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.product-list h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.product-item {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product-item h3 {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+.product-item .price {
+    color: #008cba;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.add-to-cart {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #008cba;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.add-to-cart:hover {
+    background-color: #005f73;
+}
+
+/* Cart Modal Styles */
+#cart-modal {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: white;
+    border: 2px solid #333;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+#cart-modal h3 {
+    margin-top: 0;
+}
+
+#cart-items {
+    list-style-type: none;
+    padding: 0;
+}
+
+#cart-items li {
+    margin: 5px 0;
+}
+
+#close-cart {
+    background-color: #008cba;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 10px auto;
+}
+
+#close-cart:hover {
+    background-color: #005f73;
+}</style></head> 
+ <body> <!-- Header --> 
+  <header> 
+   <h1>Home Decor Store</h1> 
+   <nav> <a href="index.html">Home</a> <a href="about.html">About</a> <a href="contact.html">Contact</a> <a href="#" id="cart-btn">Cart (<span id="cart-count">0</span>)</a> 
+   </nav> 
+  </header> <!-- Products Section --> 
+  <section class="product-list"> 
+   <h2>Our Exclusive Collection</h2> 
+   <div class="products-container" id="product-container"> <!-- Product Template --> <!-- You can create as many product items as you need --> 
+    <div class="product-item"> 
+     <img src="product1.jpg" alt="Elegant Ceramic Vase"> 
+     <h3>Elegant Ceramic Vase</h3> 
+     <p class="price">₹3,499</p> <button class="add-to-cart" data-name="Elegant Ceramic Vase" data-price="3499">Add to Cart</button> 
+    </div> 
+    <div class="product-item"> 
+     <img src="product2.jpg" alt="Luxury Table Lamp"> 
+     <h3>Luxury Table Lamp</h3> 
+     <p class="price">₹6,899</p> <button class="add-to-cart" data-name="Luxury Table Lamp" data-price="6899">Add to Cart</button> 
+    </div> 
+    <div class="product-item"> 
+     <img src="product3.jpg" alt="Modern Wall Art"> 
+     <h3>Modern Wall Art</h3> 
+     <p class="price">₹4,499</p> <button class="add-to-cart" data-name="Modern Wall Art" data-price="4499">Add to Cart</button> 
+    </div> <!-- Add more product items --> <!-- ... (up to 30 products) ... --> 
+    <div class="product-item"> 
+     <img src="product30.jpg" alt="Rustic Candle Holder"> 
+     <h3>Rustic Candle Holder</h3> 
+     <p class="price">₹1,499</p> <button class="add-to-cart" data-name="Rustic Candle Holder" data-price="1499">Add to Cart</button> 
+    </div> 
+   </div> 
+  </section> <!-- Footer --> 
+  <footer> 
+   <p>© 2024 Home Decor. All rights reserved.</p> 
+  </footer> <!-- Cart Modal (Hidden by Default) --> 
+  <div id="cart-modal" style="display:none;"> 
+   <h3>Cart</h3> 
+   <ul id="cart-items"></ul> 
+   <p>Total: ₹<span id="total-price">0</span></p> <button id="close-cart">Close</button> 
+  </div> <!-- Include JavaScript --> 
+  <script src="script.js"></script> 
+ 
+<script type="text/javascript" id="dcoder_script">// Cart object to store items and total price
+let cart = {
+    items: [],
+    total: 0
+};
+
+// Function to add an item to the cart
+function addToCart(name, price) {
+    cart.items.push({ name, price });
+    cart.total += price;
+    updateCart();
+}
+
+// Function to update the cart count and total price
+function updateCart() {
+    const cartCount = document.getElementById('cart-count');
+    cartCount.textContent = cart.items.length;
+}
+
+// Function to display cart details in a dialog box
+function displayCart() {
+    if (cart.items.length === 0) {
+        alert("Your cart is empty!");
+        return;
+    }
+
+    let cartDetails = "You have the following items in your cart:\n\n";
+    cart.items.forEach(item => {
+        cartDetails += `${item.name}: ₹${item.price}\n`;
+    });
+    cartDetails += `\nTotal: ₹${cart.total}`;
+
+    // Show cart details in a dialog box
+    alert(cartDetails);
+}
+
+// Add event listeners to all "Add to Cart" buttons
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.add-to-cart').forEach(button => {
+        button.addEventListener('click', function () {
+            const name = this.getAttribute('data-name');
+            const price = parseFloat(this.getAttribute('data-price'));
+            addToCart(name, price);
+            alert(`${name} added to cart.`);
+        });
+    });
+
+    // Add event listener to the cart button to display cart details
+    document.getElementById('cart-btn').addEventListener('click', function (e) {
+        e.preventDefault();
+        displayCart();
+    });
+});</script></body></html>
