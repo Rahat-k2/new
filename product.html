@@ -10,171 +10,86 @@
 <body>
 
     <!-- Sticky Navbar -->
-    <header>
-        <h1>Home Decor Store</h1>
-        <nav>
-            <a href="#bedroom">Bedroom Decor</a>
-            <a href="#living-room">Living Room Decor</a>
-            <a href="#kitchen">Kitchen Decor</a>
-            <a href="#outside">Outside Decor</a>
-            <a href="#office">Office Decor</a>
+   <header> 
+   <nav> 
+    <div class="logo"> 
+     <h1>Home Decor</h1> 
+    </div> 
+    </div> 
+    <ul class="nav-links"> 
+     <li><a href="index.html">Home</a></li> 
+     <li><a href="product.html">Products</a></li> 
+     <li><a href="#inspiration">Inspiration</a></li> 
+     <li><a href="#contact">Contact</a></li> 
+    </ul> 
+   
             <a href="#" id="cart-btn">Cart (<span id="cart-count">0</span>)</a>
         </nav>
     </header>
 
     <!-- Products Section -->
-
-    <section class="product-list" id="bedroom">
-        <h2>Bedroom Decor</h2>
-        <div class="products-container">
-
-            <div class="product-item">
-                <img src="product1.jpg" alt="Elegant Bedside Lamp">
-                <h3>Elegant Bedside Lamp</h3>
-                <p class="price">₹3,499</p>
-                <button class="add-to-cart" data-name="Elegant Bedside Lamp" data-price="3499">Add to Cart</button>
-                <button class="buy-now">Buy Now</button>
-            </div>
-
-            <div class="product-item">
-                <img src="product2.jpg" alt="Velvet Throw Blanket">
-                <h3>Velvet Throw Blanket</h3>
-                <p class="price">₹2,199</p>
-                <button class="add-to-cart" data-name="Velvet Throw Blanket" data-price="2199">Add to Cart</button>
-                <button class="buy-now">Buy Now</button>
-            </div>
-
-            <div class="product-item">
-                <img src="product3.jpg" alt="Luxury Duvet Cover">
-                <h3>Luxury Duvet Cover</h3>
-                <p class="price">₹4,899</p>
-                <button class="add-to-cart" data-name="Luxury Duvet Cover" data-price="4899">Add to Cart</button>
-                <button class="buy-now">Buy Now</button>
-            </div>
-
-            <div class="product-item">
-                <img src="product4.jpg" alt="Decorative Bed Pillow">
-                <h3>Decorative Bed Pillow</h3>
-                <p class="price">₹999</p>
-                <button class="add-to-cart" data-name="Decorative Bed Pillow" data-price="999">Add to Cart</button>
-                <button class="buy-now">Buy Now</button>
-            </div>
-
-            <div class="product-item">
-                <img src="product5.jpg" alt="Wooden Nightstand">
-                <h3>Wooden Nightstand</h3>
-                <p class="price">₹5,799</p>
-                <button class="add-to-cart" data-name="Wooden Nightstand" data-price="5799">Add to Cart</button>
-                <button class="buy-now">Buy Now</button>
-            </div>
+  </section> 
+  <section id="products"> 
+   <h2>Featured Products</h2> 
+   <div class="product-grid"> 
+    <article class="product-card"> 
+     <img src="living-room.jpg" alt="Living Room Decor"> 
+     <h3>Living Room Decor</h3> 
+     <p>Find the perfect pieces to complete your living space.</p> 
+    </article> 
+    <article class="product-card"> 
+     <img src="outdoor.jpg" alt="Outdoor Living"> 
+     <h3>Outdoor Decor</h3> 
+     <p>Transform your outdoor area with stylish decor products.</p> 
+    </article> 
+    <article class="product-card"> 
+     <img src="bedroom.jpg" alt="Bedroom Decor"> 
+     <h3>Bedroom Decor</h3> 
+     <p>Make your bedroom a cozy retreat with our curated selections.</p> 
+    </article> 
+    <article class="product-card"> 
+     <img src="kitchen.jpg" alt="Kitchen Decor"> 
+     <h3>Kitchen Decor</h3> 
+     <p>Bring style and functionality to your kitchen.</p> 
+    </article> 
+   </div> 
+  </section> 
+  <section id="inspiration"> 
+   <h2>Inspiration for Your Home</h2> 
+   <div class="inspiration-grid"> 
+    <article> 
+     <h3>45 Outdoor Living Ideas</h3> 
+     <p>Upgrade your outdoor space with these trendy ideas.</p> 
+    </article> 
+    <article> 
+     <h3>Coastal Living Room Vibes</h3> 
+     <p>Create a coastal retreat right in your living room.</p> 
+    </article> 
+    <article> 
+     <h3>Design Tips for Small Spaces</h3> 
+     <p>Maximize your space with these practical and stylish tips.</p> 
+    </article> 
+    <article> 
+     <h3>Ultimate Bedroom Makeover</h3> 
+     <p>Transform your bedroom with chic, comfortable decor ideas.</p> 
+    </article> 
+   </div> 
+  </section> 
+<footer>
+    <div class="footer-content">
+        <div class="reviews">
+            <h4>Customer Reviews &amp; Ratings</h4>
+            <p>⭐⭐⭐⭐☆ (4.5/5 based on 320 reviews)</p>
         </div>
-    </section>
 
-    <section class="product-list" id="living-room">
-        <h2>Living Room Decor</h2>
-        <div class="products-container">
-            <div class="product-item">
-                <img src="product6.jpg" alt="Modern Sofa Set">
-                <h3>Modern Sofa Set</h3>
-                <p class="price">₹15,999</p>
-                <button class="add-to-cart" data-name="Modern Sofa Set" data-price="15999">Add to Cart</button>
-                <button class="buy-now">Buy Now</button>
-            </div>
-
-            <div class="product-item">
-                <img src="product7.jpg" alt="Decorative Rug">
-                <h3>Decorative Rug</h3>
-                <p class="price">₹2,499</p>
-                <button class="add-to-cart" data-name="Decorative Rug" data-price="2499">Add to Cart</button>
-                <button class="buy-now">Buy Now</button>
-            </div>
-
-            <div class="product-item">
-                <img src="product8.jpg" alt="Vintage Coffee Table">
-                <h3>Vintage Coffee Table</h3>
-                <p class="price">₹7,999</p>
-                <button class="add-to-cart" data-name="Vintage Coffee Table" data-price="7999">Add to Cart</button>
-                <button class="buy-now">Buy Now</button>
-            </div>
-
-            <div class="product-item">
-                <img src="product9.jpg" alt="Wall Art Frame">
-                <h3>Wall Art Frame</h3>
-                <p class="price">₹2,199</p>
-                <button class="add-to-cart" data-name="Wall Art Frame" data-price="2199">Add to Cart</button>
-                <button class="buy-now">Buy Now</button>
-            </div>
-
-            <div class="product-item">
-                <img src="product10.jpg" alt="Decorative Vase">
-                <h3>Decorative Vase</h3>
-                <p class="price">₹1,299</p>
-                <button class="add-to-cart" data-name="Decorative Vase" data-price="1299">Add to Cart</button>
-                <button class="buy-now">Buy Now</button>
-            </div>
+        <div class="social-media">
+            <h4>Follow Us</h4>
+            <ul>
+                <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+                <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+                <li><a href="https://pinterest.com" target="_blank"><i class="fab fa-pinterest"></i> Pinterest</a></li>
+            </ul>
         </div>
-    </section>
-
-    <section class="product-list" id="kitchen">
-        <h2>Kitchen Decor</h2>
-        <div class="products-container">
-            <div class="product-item">
-                <img src="product11.jpg" alt="Modern Kitchenware Set">
-                <h3>Modern Kitchenware Set</h3>
-                <p class="price">₹3,299</p>
-                <button class="add-to-cart" data-name="Modern Kitchenware Set" data-price="3299">Add to Cart</button>
-                <button class="buy-now">Buy Now</button>
-            </div>
-
-            <div class="product-item">
-                <img src="product12.jpg" alt="Decorative Spice Rack">
-                <h3>Decorative Spice Rack</h3>
-                <p class="price">₹1,499</p>
-                <button class="add-to-cart" data-name="Decorative Spice Rack" data-price="1499">Add to Cart</button>
-                <button class="buy-now">Buy Now</button>
-            </div>
-
-            <div class="product-item">
-                <img src="product13.jpg" alt="Kitchen Towel Set">
-                <h3>Kitchen Towel Set</h3>
-                <p class="price">₹599</p>
-                <button class="add-to-cart" data-name="Kitchen Towel Set" data-price="599">Add to Cart</button>
-                <button class="buy-now">Buy Now</button>
-            </div>
-
-            <div class="product-item">
-                <img src="product14.jpg" alt="Marble Countertop Decor">
-                <h3>Marble Countertop Decor</h3>
-                <p class="price">₹2,899</p>
-                <button class="add-to-cart" data-name="Marble Countertop Decor" data-price="2899">Add to Cart</button>
-                <button class="buy-now">Buy Now</button>
-            </div>
-
-            <div class="product-item">
-                <img src="product15.jpg" alt="Kitchen Wall Art">
-                <h3>Kitchen Wall Art</h3>
-                <p class="price">₹1,999</p>
-                <button class="add-to-cart" data-name="Kitchen Wall Art" data-price="1999">Add to Cart</button>
-                <button class="buy-now">Buy Now</button>
-            </div>
-        </div>
-    </section>
-
-    <section class="product-list" id="outside">
-        <h2>Outside Decor</h2>
-        <div class="products-container">
-            <div class="product-item">
-                <img src="product16.jpg" alt="Garden Lantern">
-                <h3>Garden Lantern</h3>
-                <p class="price">₹2,599</p>
-                <button class="add-to-cart" data-name="Garden Lantern" data-price="2599">Add to Cart</button>
-                <button class="buy-now">Buy Now</button>
-            </div>
-
-            <div class="product-item">
-                <img src="product17.jpg" alt="Outdoor Bench">
-                <h3>Outdoor Bench</h3>
-                <p class="price">₹9,999</p>
-                <button class="add-to-cart" data-name="Outdoor Bench" data-price="9999">Add to Cart</button>
-                <button class="buy-
-                H1JVusp1jJ3WpZrE9oqDUim+Hq8JJ59A+g3EFD0gbQg
+    </div>
+</footer>
