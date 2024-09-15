@@ -1,1 +1,75 @@
-a
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Living Room Decor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Sticky Navbar -->
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Home Decor</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="#inspiration">Inspiration</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <a href="cart.php" id="cart-btn">Cart (<span id="cart-count">0</span>)</a>
+        </nav>
+    </header>
+
+    <!-- Living Room Decor Section -->
+    <section id="living-room-decor" class="product-list">
+        <h2>Living Room Decor</h2>
+        <div class="products-container">
+            <div class="product-item">
+                <img src="sofa.jpg" alt="Luxury Sofa">
+                <h3>Luxury Sofa</h3>
+                <p class="price">₹12,999</p>
+                <button class="add-to-cart" data-name="Luxury Sofa" data-price="12999">Add to Cart</button>
+                <button class="buy-now">Buy Now</button>
+            </div>
+
+            <div class="product-item">
+                <img src="coffee-table.jpg" alt="Modern Coffee Table">
+                <h3>Modern Coffee Table</h3>
+                <p class="price">₹4,999</p>
+                <button class="add-to-cart" data-name="Modern Coffee Table" data-price="4999">Add to Cart</button>
+                <button class="buy-now">Buy Now</button>
+            </div>
+
+            <div class="product-item">
+                <img src="rug.jpg" alt="Decorative Rug">
+                <h3>Decorative Rug</h3>
+                <p class="price">₹2,999</p>
+                <button class="add-to-cart" data-name="Decorative Rug" data-price="2999">Add to Cart</button>
+                <button class="buy-now">Buy Now</button>
+            </div>
+
+            <div class="product-item">
+                <img src="curtains.jpg" alt="Elegant Curtains">
+                <h3>Elegant Curtains</h3>
+                <p class="price">₹1,999</p>
+                <button class="add-to-cart" data-name="Elegant Curtains" data-price="1999">Add to Cart</button>
+                <button class="buy-now">Buy Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Home Decor Store</p>
+        <a href="#">Facebook</a> |
+        <a href="#">Instagram</a> |
+        <a href="#">Twitter</a>
+    </footer>
+
+    <script src="living.js"></script>
+</body>
+</html>
