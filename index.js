@@ -1,22 +1,12 @@
-//  bedroom js 
-let cart = [];
+// cart.js
 
-document.querySelectorAll('.add-to-cart').forEach(button => {
-    button.addEventListener('click', () => {
-        const name = button.getAttribute('data-name');
-        const price = button.getAttribute('data-price');
-
-        // Add product to cart array
-        cart.push({ name: name, price: price });
-        
-        // Update cart count
-        document.getElementById('cart-count').innerText = cart.length;
-        
-        alert(`${name} added to cart!`);
-    });
-});
-
-document.getElementById('cart-btn').addEventListener('click', () => {
-    let cartDetails = cart.map(item => `${item.name}: ₹${item.price}`).join('\n');
-    alert(`Your Cart:\n${cartDetails}`);
+document.addEventListener('DOMContentLoaded', () => {
+    const cartCount = document.getElementById('cart-count');
+    
+    // For demonstration purposes, we'll just increment the cart count every 2 seconds
+    let count = 0;
+    setInterval(() => {
+        count++;
+        cartCount.textContent = count;
+    }, 2000);
 });
