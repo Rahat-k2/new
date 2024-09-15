@@ -385,7 +385,7 @@ a {
 header {
     position: sticky;
     top: 0;
-    background-color: #fff;
+    background-color: #8a2be2; /* Royal Violet shade */
     padding: 10px 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 1000;
@@ -393,7 +393,7 @@ header {
 
 header .logo h1 {
     font-size: 24px;
-    color: black;
+    color: white;
     font-weight: bold;
 }
 
@@ -409,7 +409,7 @@ header .logo h1 {
 
 .nav-links a {
     font-weight: bold;
-    color: black;
+    color: white;
     padding: 10px;
     transition: color 0.3s ease;
 }
@@ -420,7 +420,7 @@ header .logo h1 {
 
 #cart-btn {
     font-weight: bold;
-    color: black;
+    color: white;
     margin-left: auto;
     padding: 10px;
 }
