@@ -1,21 +1,15 @@
 /* General Styles */
-body, h1, h2, h3, p, ul, li {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
+    background-color: #f5f5f5;
     color: #333;
 }
 
-/* Header and Navigation */
 header {
-    background: #6A0DAD; /* Royal violet */
+    background-color: #333;
     color: #fff;
-    padding: 10px 0;
+    padding: 1rem 0;
 }
 
 nav {
@@ -45,91 +39,124 @@ nav {
     text-decoration: none;
 }
 
-/* Cart Button */
 #cart-btn {
-    color: #fff;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 5px 15px;
+    border-radius: 5px;
     text-decoration: none;
-    font-weight: bold;
 }
 
-/* Products Section */
-#products {
+/* Living Section */
+#living {
     padding: 20px;
+    background-color: #fff;
 }
 
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+.living-grid {
+    display: flex;
+    flex-wrap: wrap;
     gap: 20px;
 }
 
-.product-card {
-    background: #fff;
+.living-item {
+    background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
+    width: 23%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.product-card img {
+.living-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.living-item img {
     width: 100%;
     height: auto;
 }
 
-.product-card h3 {
+.living-item h3 {
     margin: 10px;
 }
 
-.product-card a {
+.living-item a {
     display: block;
-    color: #000; /* Black color */
-    font-weight: bold; /* Bold text */
-    text-decoration: none; /* Remove underline */
-    margin: 10px; /* Add margin around the link */
-    padding: 5px; /* Add some padding for better click area */
-    transition: color 0.3s ease; /* Smooth transition for hover effect */
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 10px;
+    padding: 5px;
+    background-color: #eee;
+    border-radius: 5px;
 }
 
-.product-card a:hover {
-    color: #ff5722; /* Change color on hover */
-}
-
-.product-card p {
-    margin: 0 10px 10px;
-}
-
-/* Inspiration Section */
-#inspiration {
-    padding: 20px;
-    background: #f4f4f4;
-}
-
-.inspiration-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-}
-
-.inspiration-grid article {
-    background: #fff;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.inspiration-grid h3 {
-    margin-bottom: 10px;
+.living-item a:hover {
+    background-color: #ddd;
 }
 
 /* Footer */
 footer {
-    background: #333;
+    background-color: #333;
     color: #fff;
-    padding: 20px;
+    padding: 1rem 0;
     text-align: center;
 }
 
 .footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
     max-width: 1200px;
     margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.reviews h4 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.reviews p {
+    font-size: 1.2rem;
+}
+
+.social-media h4 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.social-media ul {
+    list-style: none;
+    padding: 0;
+}
+
+.social-media ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-media ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.social-media ul li a:hover {
+    color: #ff6347; /* Tomato color */
+}
+
+.social-media ul li i {
+    margin-right: 8px;
+    font-size: 1.2rem;
+}
+
+footer p {
+    margin-top: 1rem;
+    font-size: 0.9rem;
 }
