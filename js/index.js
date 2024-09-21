@@ -1,13 +1,9 @@
-// Basic client-side validation
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-    var name = document.getElementById('name').value;
-    var email = document.getElementById('email').value;
-    var message = document.getElementById('message').value;
+// This JS can be expanded based on future requirements.
+// For now, it's ready to handle click and hover events on the Interactive Elements.
 
-    if (name === '' || email === '' || message === '') {
-        alert('Please fill out all fields.');
-        event.preventDefault();
-    } else {
-        alert('Thank you for your message! We will get back to you soon.');
-    }
-});
+document.querySelectorAll('.style-hover-card').forEach(card => {
+    card.addEventListener('click', function() {
+      alert('Explore more details about ' + card.querySelector('h3').innerText);
+    });
+  });
+  
