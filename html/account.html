@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account - Home Decor</title>
+    <link rel="stylesheet" href="./../style/account.css">
+</head>
+<body>
+    <!-- Navbar Section -->
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Home Decor</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#products">Products</a></li> <!-- Links to Products section in index.html -->
+                <li><a href="index.html#inspiration">Inspiration</a></li> <!-- Links to Inspiration section in index.html -->
+                <li><a href="account.html" class="active">Account</a></li> <!-- Current page -->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Account Section -->
+    <section id="account">
+        <div class="account-container">
+            <h2>My Account</h2>
+            <form action="account.php" method="POST">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                
+                <button type="submit">Update Account</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Home Decor. All Rights Reserved.</p>
+    </footer>
+
+    <script src="./../js/account.js"></script>
+</body>
+</html>
