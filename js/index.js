@@ -6,4 +6,8 @@ document.querySelectorAll('.style-hover-card').forEach(card => {
       alert('Explore more details about ' + card.querySelector('h3').innerText);
     });
   });
-  
+  //inspiration 
+// Adding a simple onLoad alert as an example
+window.onload = function() {
+    alert("Welcome to Home Decor Inspiration!");
+};
