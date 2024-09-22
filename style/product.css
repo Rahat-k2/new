@@ -1,140 +1,116 @@
 /* General Styles */
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Light background */
+    margin: 0;
+    padding: 0;
 }
 
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem 0;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    background-color: #4CAF50; /* Primary color for header */
+    color: white;
+    padding: 10px 20px;
 }
 
 .logo h1 {
     margin: 0;
 }
 
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .nav-links {
     list-style: none;
     display: flex;
-}
-
-.nav-links li {
-    margin: 0 15px;
+    gap: 20px;
 }
 
 .nav-links a {
-    color: #fff;
+    color: white;
     text-decoration: none;
+    font-weight: bold;
 }
 
 #cart-btn {
-    background-color: #f4f4f4;
-    color: #333;
-    padding: 5px 15px;
-    border-radius: 5px;
-    text-decoration: none;
+    color: white;
+    font-weight: bold;
 }
-
-/* Product Details Section */
-#product-details {
+/* Products Section */
+#products {
+    padding: 20px;
+    background-color: white;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center; /* Center all items */
+}
+
+h2 {
+    text-align: center;
+    color: #333; /* Darker color for headings */
+}
+
+.product-grid {
+    display: flex;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Ensure cards take up a good width */
+    gap: 20px; /* Increase gap between items */
+    width: 90%; /* Set a max width for the grid */
+    margin: 0 auto; /* Center the grid */
+}
+
+.product-card {
     background-color: #fff;
-    padding: 20px;
-}
-
-.product-image {
-    flex: 1;
-    max-width: 500px;
-}
-
-.product-image img {
-    width: 100%;
-    border-radius: 8px;
-}
-
-.product-info {
-    flex: 2;
-    padding: 20px;
-}
-
-.product-info h1 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-
-.product-info p {
-    margin: 10px 0;
-}
-
-.product-info .price {
-    font-size: 1.5rem;
-    color: #ff6347; /* Tomato color */
-}
-
-.product-info .description {
-    margin-top: 20px;
-    font-size: 1rem;
-    color: #666;
-}
-
-.product-info button {
-    background-color: #008cba;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
+    border: 1px solid #ddd;
     border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    padding: 15px; /* Increased padding for card content */
+    text-align: center;
+    transition: transform 0.2s;
+    width: 100%; /* Ensure the card takes the full width of the grid cell */
+    max-width: 100%; /* Optional: Set a max width for larger screens */
 }
 
-.product-info button:hover {
-    background-color: #005f73;
+.product-card:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+.product-card img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.product-card a {
+    text-decoration: none;
+    color: #4CAF50; /* Link color matching header */
+    font-weight: bold;
+    display: block;
+    margin: 10px 0;
 }
 
 /* Footer */
 footer {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem 0;
+    background-color: #f1f1f1; /* Light background for footer */
+    padding: 20px;
+    text-align: center; /* Center the text in the footer */
+    width: 100%; /* Full width */
+}
+
+.footer-content {
+    max-width: 1200px; /* Optional: max width for the footer content */
+    margin: 0 auto; /* Center the footer content */
+}
+
+/* Footer */
+footer {
+    background-color: #4CAF50; /* Matching footer color */
+    color: white;
+    padding: 20px;
     text-align: center;
 }
 
 .footer-content {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 1rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    flex-wrap: wrap;
-}
-
-.reviews h4 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.reviews p {
-    font-size: 1.2rem;
-}
-
-.social-media h4 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 10px;
 }
 
 .social-media ul {
@@ -143,27 +119,10 @@ footer {
 }
 
 .social-media ul li {
-    display: inline-block;
+    display: inline;
     margin: 0 10px;
 }
 
 .social-media ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1rem;
-    transition: color 0.3s;
-}
-
-.social-media ul li a:hover {
-    color: #ff6347; /* Tomato color */
-}
-
-.social-media ul li i {
-    margin-right: 8px;
-    font-size: 1.2rem;
-}
-
-footer p {
-    margin-top: 1rem;
-    font-size: 0.9rem;
-}
+    color: white;
+    text-decoration: none

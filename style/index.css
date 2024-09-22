@@ -215,25 +215,33 @@ p {
     transform: translateY(-3px);
 }
 
-/* Footer */
 footer {
-    background-color: #5A4A42;
-    color: #fff;
-    padding: 2rem 0;
-    text-align: center;
+    background-color: #f8f9fa; /* Light background color for contrast */
+    padding: 20px; /* Space around the content */
+    text-align: center; /* Center text */
+    width: 100%; /* Full width */
+    position: relative; /* Position relative to its parent */
+    bottom: 0; /* Align to the bottom of the page */
 }
 
 .footer-content {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 1rem 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    flex-wrap: wrap;
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space out the items */
+    align-items: center; /* Center items vertically */
+    max-width: 1200px; /* Optional: Max width for larger screens */
+    margin: 0 auto; /* Center the content in the footer */
 }
 
-footer p {
-    margin-top: 1rem;
-    font-size: 0.9rem;
+.footer-content div {
+    flex: 1; /* Allow items to grow and fill space */
+}
+
+.social-media ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+}
+
+.social-media ul li {
+    display: inline; /* Display list items inline */
+    margin: 0 10px; /* Space between social media links */
 }
